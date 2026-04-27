@@ -41,19 +41,19 @@ function registerUser(PDO $db, $data) {
 
 
         if ($stmt->execute()) {
-            return ["status" => true, "message" => "Ο χρήστης δημιουργήθηκε επιτυχώς."];
+            return ["status" => true, "message" => "User created successfully."];
         }
     } catch (PDOException $e) {
         //Handle duplicate entry errors
         if ($e->getCode() == 23000) {
             return ["status" => false,
-                "message" => "Το username ή το email χρησιμοποιείται ήδη."];
+                "message" => "Username or email already exist."];
         }
         return ["status" => false,
-            "message" => "Σφάλμα συστήματος κατά την εγγραφή."];
+            "message" => "System Error."];
     }
     return ["status" => false,
-        "message" => "Η εγγραφή απέτυχε."];
+        "message" => "Registration failed"];
 }
 
 //Function to authenticate a user and issue with JWT Token
