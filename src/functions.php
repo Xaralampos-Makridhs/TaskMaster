@@ -89,7 +89,7 @@ function loginUser(PDO $db, $data) {
             )
         );
 
-        //Generate the JWT string  JS256
+        //Generate the JWT string  HS256
         $jwt=JWT::encode($payload,$secret_key,'HS256');
 
         return[
@@ -144,7 +144,7 @@ function validateToken(){
 function createTask($db, $data) {
     if (empty($data['user_id']) || empty($data['title'])) {
         return ["status" => false,
-            "message" => "User ID και τίτλος απαιτούνται."];
+            "message" => "User ID and title required."];
     }
 
     //SQL statement
@@ -165,11 +165,11 @@ function createTask($db, $data) {
 
         if ($stmt->execute()) {
             return ["status" => true,
-                "message" => "Το task δημιουργήθηκε."];
+                "message" => "Task created successfully."];
         }
     } catch (PDOException $e) {
         return ["status" => false,
-            "message" => "Αποτυχία δημιουργίας task: " . $e->getMessage()];
+            "message" => "Failed: " . $e->getMessage()];
     }
 }
 
@@ -186,7 +186,7 @@ function getTasks($db, $user_id) {
             "data" => $stmt->fetchAll()];
     } catch (PDOException $e) {
         return ["status" => false,
-            "message" => "Σφάλμα κατά την ανάκτηση των tasks."];
+            "message" => "Error"];
     }
 }
 
