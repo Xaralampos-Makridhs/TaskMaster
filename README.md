@@ -41,12 +41,12 @@ git clone https://github.com/your-username/task-manager-api.git
 cd task-manager-api
 ```
 
-2. Install dependencies
+### 2. Install dependencies
 ```bash
 composer install
 ```
 
-4. Create .env file
+### 3. Create .env file
 ```bash
 DB_HOST=localhost
 DB_NAME=your_database_name
