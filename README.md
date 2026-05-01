@@ -203,9 +203,5 @@ Input sanitization against XSS
 ## ⚠️ Important Note
 Users can only access and manage their own tasks through JWT authentication.
 
-# In index.php, the functions:
-
-deleteTask()
-updateTask()
-
+In index.php, the functions: deleteTask(), updateTask()
 are called with a user ID parameter but the functions do not accept it.
