@@ -203,8 +203,6 @@ Input sanitization against XSS
 ⚠️ Important Note
 Users can only access and manage their own tasks through JWT authentication.
 
-🐞 Known Issue
-
 In index.php, the functions:
 
 deleteTask()
