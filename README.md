@@ -205,9 +205,3 @@ deleteTask()
 updateTask()
 
 are called with a user ID parameter but the functions do not accept it.
-
-👉 Suggested fix: update the function signatures to include user ownership checks.
-
-📄 License
-
-This project is open-source and available under the MIT License.
