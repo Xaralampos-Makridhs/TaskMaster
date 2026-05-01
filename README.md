@@ -200,7 +200,7 @@ JWT authentication for protected routes
 Prepared statements (PDO) to prevent SQL Injection
 Input sanitization against XSS
 
-⚠️ Important Note
+## ⚠️ Important Note
 Users can only access and manage their own tasks through JWT authentication.
 
 In index.php, the functions:
