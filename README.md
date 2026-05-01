@@ -39,9 +39,15 @@ Users can register, log in, and manage their own tasks securely.
 ```bash
 git clone https://github.com/your-username/task-manager-api.git
 cd task-manager-api
+```
+
 2. Install dependencies
+```bash
 composer install
-3. Create .env file
+```
+
+4. Create .env file
+```bash
 DB_HOST=localhost
 DB_NAME=your_database_name
 DB_USER=root
