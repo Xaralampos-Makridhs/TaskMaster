@@ -22,7 +22,7 @@ Users can register, log in, and manage their own tasks securely.
 
 ## 🛠 Technologies Used
 
-- PHP (Vanilla)
+- PHP
 - MySQL
 - PDO
 - Composer
